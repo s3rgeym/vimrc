@@ -1,4 +1,5 @@
-" отключаем реждим совместимости с vi
+" https://ru.wikibooks.org/wiki/Vim (gx для открытия ссылки в браузере)
+" отключаем режим совместимости с vi
 set nocompatible
 
 if !exists('$MYVIMRC')
