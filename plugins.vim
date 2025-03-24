@@ -108,7 +108,7 @@ nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>/ :BLines<space><CR>
 
 
-" Если установлен editorconfig, то используем его
+" Если установлен editorconfig, то используем его, тк нативная реализация не поддерживает глобальные конфиги (~/.editorconfig)
 if executable('editorconfig')
   let g:EditorConfig_core_mode = 'external_command'
   let g:EditorConfig_exec_path = exepath('editorconfig')
@@ -168,6 +168,10 @@ let g:webdevicons_enable = 1
 let g:webdevicons_enable_nerdtree = 1
 let g:webdevicons_enable_airline_tabline = 1
 let g:webdevicons_enable_airline_statusline = 1
+
+
+" Использовать разные цвета скобок в зависимости от вложенности
+let g:rainbow_active = 1
 
 
 " Общие настройки для airline/lightline
