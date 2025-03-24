@@ -104,7 +104,7 @@ nnoremap <leader>r :Rg<CR>
 " Поиск в открытых буферах
 nnoremap <leader>b :Buffers<CR>
 
-" Поиск строк в текущем буфере (:Lines ищет во всех)
+" Поиск строк в текущем буфере
 nnoremap <leader>/ :BLines<CR>
 
 
