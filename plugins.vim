@@ -99,13 +99,13 @@ let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.6 } }
 nnoremap <leader>f :Files<CR>
 
 " Рекурсивный поиск по содержимому
-nnoremap <leader>g :Rg<CR>
+nnoremap <leader>r :Rg<CR>
 
 " Поиск в открытых буферах
 nnoremap <leader>b :Buffers<CR>
 
-" Поиск строк в текущем буфере
-nnoremap <leader>/ :BLines<space><CR>
+" Поиск строк в текущем буфере (:Lines ищет во всех)
+nnoremap <leader>/ :BLines<CR>
 
 
 " Если установлен editorconfig, то используем его, тк нативная реализация не поддерживает глобальные конфиги (~/.editorconfig)
