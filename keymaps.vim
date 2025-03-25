@@ -127,7 +127,16 @@ nnoremap <leader>tt :<C-u>term<CR>
 tnoremap <C-[> <C-\><C-n>
 
 " Отладка
- nnoremap <leader>pd :tab term pudb %<CR>
+nnoremap <leader>d :tab term pudb %<CR>
+
+" Скрыть/показать проводник
+nnoremap <silent> <leader>p :NERDTreeToggle<CR>
+
+" Поиск по файлам
+nnoremap <silent> <leader>f :Files<CR>
+nnoremap <silent> <leader>r :Rg<CR>
+nnoremap <silent> <leader>b :Buffers<CR>
+nnoremap <silent> <leader>/ :BLines<CR>
 
 " Настройка клавиш для LSP
 function! s:setup_lsp_keymaps() abort
@@ -151,7 +160,6 @@ function! s:setup_lsp_keymaps() abort
   nnoremap <buffer> <expr><c-f> lsp#scroll(+4)
   nnoremap <buffer> <expr><c-d> lsp#scroll(-4)
 endfunction
-
 
 " Автодополнение
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"

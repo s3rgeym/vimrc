@@ -33,19 +33,16 @@ Plug 'tpope/vim-commentary'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 
-" LSP
+" Поддержка LSP
 Plug 'prabirshrestha/vim-lsp'
-
 " Автотатическая настройка языковых серверов для vim-lsp
 Plug 'mattn/vim-lsp-settings'
 
 " Автодополнение
 Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'prabirshrestha/asyncomplete-buffer.vim'
 Plug 'prabirshrestha/asyncomplete-file.vim'
-
-" Debugger
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
 
 " Поддержка .editorconfig
 Plug 'editorconfig/editorconfig-vim'
@@ -59,13 +56,10 @@ Plug 'ryanoasis/vim-devicons'
 
 " Темы
 Plug 'morhetz/gruvbox'
-Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
-Plug 'joshdick/onedark.vim'
 
 call plug#end()
 
 " NERDTree
-nnoremap <silent> <leader>n :NERDTreeToggle<CR>
 let NERDTreeShowHidden = 1
 
 augroup nerdtree_config
@@ -76,10 +70,6 @@ augroup END
 
 " fzf
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.6 } }
-nnoremap <silent> <leader>f :Files<CR>
-nnoremap <silent> <leader>r :Rg<CR>
-nnoremap <silent> <leader>b :Buffers<CR>
-nnoremap <silent> <leader>/ :BLines<CR>
 
 " editorconfig
 if executable('editorconfig')
@@ -105,9 +95,7 @@ augroup lsp_config
   autocmd User lsp_buffer_enabled call s:setup_lsp()
 augroup END
 
-" autocompolete
-let g:asyncomplete_auto_completeopt = 1
-
+" asyncompolete
 call asyncomplete#register_source(asyncomplete#sources#buffer#get_source_options({
     \ 'name': 'buffer',
     \ 'allowlist': ['*'],
