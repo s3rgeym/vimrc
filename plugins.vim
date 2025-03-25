@@ -44,7 +44,6 @@ Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 
 " Debugger
-Plug 'puremourning/vimspector'
 
 " Поддержка .editorconfig
 Plug 'editorconfig/editorconfig-vim'
@@ -56,13 +55,13 @@ Plug 'vim-airline/vim-airline-themes'
 " Иконки
 Plug 'ryanoasis/vim-devicons'
 
-
+" Тема
 Plug 'morhetz/gruvbox'
 
 call plug#end()
 
 " NERDTree
-nnoremap <silent> <leader>t :NERDTreeToggle<CR>
+nnoremap <silent> <leader>n :NERDTreeToggle<CR>
 let NERDTreeShowHidden = 1
 
 augroup nerdtree_config
@@ -126,20 +125,6 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <CR> pumvisible() ? asyncomplete#close_popup() : "\<CR>"
 imap <C-@> <Plug>(asyncomplete_force_refresh)
-
-" vimspector
-" Используем сочетания VSCode
-" F5 — Начать/продолжить отладку
-" Shift-F5 — Прервать
-" F9 — поставить breakpoint
-let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
-
-" mnemonic 'di' = 'debug inspect' (pick your own, if you prefer!)
-
-" for normal mode - the word under the cursor
-nmap <Leader>di <Plug>VimspectorBalloonEval
-" for visual mode, the visually selected text
-xmap <Leader>di <Plug>VimspectorBalloonEval
 
 " airline
 set noshowmode

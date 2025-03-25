@@ -9,7 +9,7 @@ set pastetoggle=<F2>
 
 " Чтобы лишний раз Shift не нажимать
 " Может конфликтовать с vim-sneak
-"nnoremap ; :
+nnoremap ; :
 
 " Копировать всю строку
 "nnoremap Y y$
@@ -121,13 +121,10 @@ nnoremap <leader>sv :so $MYVIMRC<CR>
 
 
 " Работа с терминалом
-" Открыть терминал (Ctrl-t уже используется для тегов, но они бесполезны с LSP)
-nnoremap <C-t> :<C-u>term<CR>
+nnoremap <leader>tt :<C-u>term<CR>
 
-" Размер терминала
-set termwinsize=10x0
+" Выход из режима редактирования во встроенном терминале
+tnoremap <C-[> <C-\><C-n>
 
-" Переключение в режим прокрутки терминала
-" Для прокрутки используйте j, k, gg, G, Ctrl+f, Ctrl+b
-" Для выхода из этого режима надо нажать i или a
-tnoremap <C-x> <C-\><C-n>
+" Отладка
+ nnoremap <leader>pd :tab term pudb %<CR>
