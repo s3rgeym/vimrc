@@ -44,30 +44,27 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" Изменение размеров окна
-" Изменение вертикального размера не особо нужно
-nnoremap + <C-w>>
-nnoremap _ <C-w><
-"nnoremap <M-Down> <C-w>+
-"nnoremap <M-Up> <C-w>-
-
 " Разбиение окон
 nnoremap <leader><CR> :vsplit<CR>
 
 " Хотя gt, gT для табов легко запомнить
-nnoremap <M-Left> :tabprevious<CR>
-nnoremap <M-Right> :tabnext<CR>
+nnoremap <C-Up> :tabprevious<CR>
+nnoremap <C-Down> :tabnext<CR>
+nnoremap <C-Right> :bn<CR>
+nnoremap <C-Left> :bp<CR>
 
-nnoremap <M-Up> :bp<CR>
-nnoremap <M-Down> :bn<CR>
+" Изменение размеров окна
+nnoremap <A-Up> <C-w>-
+nnoremap <A-Down> <C-w>+
+nnoremap <A-Right> <C-w><
+nnoremap <A-left> <C-w>>
 
 " Выбрать буфер из списка
 nnoremap <leader>l :ls<CR>:b<Space>
 
 " Закрыть буфер
-" https://github.com/preservim/nerdtree/issues/400
-noremap <C-x> :bp<cr>:bd #<cr>
-inoremap <C-x> <Esc>:bp<cr>:bd #<cr>
+noremap <C-q> :bd!<CR>
+inoremap <C-q> <Esc>:bd!<CR>
 
 " Открыть новую вкладку
 nnoremap <leader>t :tabnew<CR>
@@ -85,7 +82,7 @@ nnoremap <leader>to :tabonly<CR>
 nnoremap <leader>tm :tabmove<CR>
 
 " Открыть файл в новой вкладке
-nnoremap <leader>te :tabedit |
+nnoremap <leader>te :tabedit<Bar>
 
 " Выбор вкладки
 nnoremap <leader>1 1gt
@@ -111,7 +108,7 @@ nnoremap <leader>Q :qa<CR>
 cmap w!! w !sudo tee > /dev/null %
 
 " Редактирование конфига в новой вкладке
-nnoremap <leader>ev :e $MYVIMRC<CR>
+nnoremap <leader>ev :tabedit $MYVIMRC<CR>
 
 " Применить конфиг
 nnoremap <leader>sv :so $MYVIMRC<CR>
@@ -120,13 +117,16 @@ nnoremap <leader>sv :so $MYVIMRC<CR>
 "nnoremap <Leader>m :<C-u>map<CR>
 
 " Работа с терминалом
-nnoremap <leader>tt :<C-u>term<CR>
+"nnoremap <leader>tt :<C-u>term<CR>
+" tags все равно никто не использует
+nnoremap <C-t> :<C-u>term<CR>
 
 " Выход из режима редактирования во встроенном терминале
+" На <Esc> эту связку почему-то нельзя повесить
 tnoremap <C-[> <C-\><C-n>
 
-" Скрыть/показать проводник
-nnoremap <silent> <leader>p :NERDTreeToggle<CR>
+" Скрыть/показать боковую панель с файлами
+nnoremap <silent> <leader>n :NERDTreeToggle<CR>
 
 " Поиск по файлам
 nnoremap <silent> <leader>f :Files<CR>
