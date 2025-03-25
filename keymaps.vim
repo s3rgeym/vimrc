@@ -130,7 +130,7 @@ nnoremap <C-t> :<C-u>term<CR>
 
 " Выход из режима редактирования во встроенном терминале
 " На <Esc> эту связку почему-то нельзя повесить
-tnoremap <C-t> <C-\><C-n>:q<CR>
+tnoremap <C-t> <C-\><C-n>
 
 " Скрыть/показать боковую панель с файлами
 nnoremap <silent> <leader>n :NERDTreeToggle<CR>
