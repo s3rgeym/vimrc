@@ -42,6 +42,8 @@ packadd thermdebug
 pipx install --system-site-packages pudb
 ```
 
+* `--system-site-packages` позволяет использовать системные пакеты внутри виртуального окружения в которое был установлен `pudb`.
+
 Для его запуска можно использовать привязку:
 
 ```vim
