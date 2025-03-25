@@ -52,6 +52,8 @@ packadd thermdebug
 * `F9` — добавить/удалить breakpoint.
 * `F10` — удалить все breakpoint'ы.
 
+---
+
 * [Python Debugging With Pdb](https://realpython.com/python-debugging-pdb/) (статья написана не индусом, что уже ее делает хорошей)
 
 Так же можно использовать [pudb](https://documen.tician.de/pudb/) — лучший отладичк питоновского кода для терминала.
