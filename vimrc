@@ -2,6 +2,8 @@
 " отключаем режим совместимости с vi
 set nocompatible
 
+" Эта переменная окружения используется в текущих настройках, но может быть не
+" задана
 if !exists('$MYVIMRC')
   let $MYVIMRC = expand('<sfile>:p')
 endif
