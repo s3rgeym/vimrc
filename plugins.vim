@@ -114,7 +114,7 @@ function! s:setup_lsp() abort
   nnoremap <buffer> <expr><c-d> lsp#scroll(-4)
 
   " Форматирование
-  autocmd BufWritePre <buffer> LspDocumentFormatSync
+  autocmd BufWritePre <buffer> LspDocumentFormat
 endfunction
 
 augroup lsp_config
