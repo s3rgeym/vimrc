@@ -12,11 +12,13 @@ git clone https://github.com/s3rgeym/vimrc.git ~/.vim
 
 **LSP** — это протокол, придуманный в Microsoft... Он предоставляет линтинг, автодополнение и рефакторинг. Для поддержки LSP в моем конфиге используется `vim-lsp`. Однако, он требует ручной настройки различных language server'ов. Для автоматической же я использую `vim-lsp-settings`. Для вывода результатов автоподстановки нужны `asyncomplete.vim` и `asyncomplete-lsp.vim`.
 
-Для поддержки Python нужно поставить сл зависимости:
+Для поддержки Python нужно поставить [python-lsp-server](https://github.com/python-lsp/python-lsp-server) и его зависимости:
 
 ```sh
 sudo pacman -S python-lsp-server autopep8 flake8 python-pylint python-rope
 ```
+
+Языковые сервера так же можно ставить через `:LspInstallServer`.
 
 ### Поиск по файлам, буферам
 
