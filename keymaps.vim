@@ -129,6 +129,30 @@ tnoremap <C-[> <C-\><C-n>
 " Отладка
  nnoremap <leader>pd :tab term pudb %<CR>
 
+" Настройка клавиш для LSP
+function! s:setup_lsp_keymaps() abort
+  " Навигация
+  nmap <buffer> gd <plug>(lsp-definition)
+  nmap <buffer> gs <plug>(lsp-document-symbol-search)
+  nmap <buffer> gS <plug>(lsp-workspace-symbol-search)
+  nmap <buffer> gr <plug>(lsp-references)
+  nmap <buffer> gi <plug>(lsp-implementation)
+  nmap <buffer> gt <plug>(lsp-type-definition)
+
+  " Рефакторинг
+  nmap <buffer> <leader>rn <plug>(lsp-rename)
+
+  " Диагностика
+  nmap <buffer> [g <plug>(lsp-previous-diagnostic)
+  nmap <buffer> ]g <plug>(lsp-next-diagnostic)
+  nmap <buffer> K <plug>(lsp-hover)
+
+  " Прокрутка
+  nnoremap <buffer> <expr><c-f> lsp#scroll(+4)
+  nnoremap <buffer> <expr><c-d> lsp#scroll(-4)
+endfunction
+
+
 " Автодополнение
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
