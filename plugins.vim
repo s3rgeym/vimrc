@@ -83,8 +83,7 @@ function! s:setup_lsp() abort
   setlocal signcolumn=yes
   if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
 
-  " Вызов функции с настройками клавиш
-  call s:setup_lsp_keymaps()
+  call Setup_LSP_Keymaps()
 
   " Форматирование
   autocmd BufWritePre <buffer> LspDocumentFormat

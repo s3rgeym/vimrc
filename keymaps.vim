@@ -119,7 +119,6 @@ nnoremap <leader>sv :so $MYVIMRC<CR>
 " Показать все текущие сопоставления клавиш
 "nnoremap <Leader>m :<C-u>map<CR>
 
-
 " Работа с терминалом
 nnoremap <leader>tt :<C-u>term<CR>
 
@@ -139,7 +138,7 @@ nnoremap <silent> <leader>b :Buffers<CR>
 nnoremap <silent> <leader>/ :BLines<CR>
 
 " Настройка клавиш для LSP
-function! s:setup_lsp_keymaps() abort
+function! Setup_LSP_Keymaps() abort
   " Навигация
   nmap <buffer> gd <plug>(lsp-definition)
   nmap <buffer> gs <plug>(lsp-document-symbol-search)
