@@ -42,6 +42,8 @@ Plug 'mattn/vim-lsp-settings'
 " Автодополнение
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'prabirshrestha/asyncomplete-buffer.vim'
+Plug 'prabirshrestha/asyncomplete-file.vim'
 
 " Debugger
 
@@ -55,8 +57,10 @@ Plug 'vim-airline/vim-airline-themes'
 " Иконки
 Plug 'ryanoasis/vim-devicons'
 
-" Тема
+" Темы
 Plug 'morhetz/gruvbox'
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+Plug 'joshdick/onedark.vim'
 
 call plug#end()
 
@@ -88,7 +92,7 @@ function! s:setup_lsp() abort
   setlocal omnifunc=lsp#complete
   setlocal signcolumn=yes
   if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
-  
+
   " Навигация
   nmap <buffer> gd <plug>(lsp-definition)
   nmap <buffer> gs <plug>(lsp-document-symbol-search)
@@ -96,19 +100,19 @@ function! s:setup_lsp() abort
   nmap <buffer> gr <plug>(lsp-references)
   nmap <buffer> gi <plug>(lsp-implementation)
   nmap <buffer> gt <plug>(lsp-type-definition)
-  
+
   " Рефакторинг
   nmap <buffer> <leader>rn <plug>(lsp-rename)
-  
+
   " Диагностика
   nmap <buffer> [g <plug>(lsp-previous-diagnostic)
   nmap <buffer> ]g <plug>(lsp-next-diagnostic)
   nmap <buffer> K <plug>(lsp-hover)
-  
+
   " Прокрутка
   nnoremap <buffer> <expr><c-f> lsp#scroll(+4)
   nnoremap <buffer> <expr><c-d> lsp#scroll(-4)
-  
+
   " Форматирование
   autocmd BufWritePre <buffer> LspDocumentFormatSync
 endfunction
@@ -121,10 +125,29 @@ augroup END
 " autocompolete
 let g:asyncomplete_auto_completeopt = 1
 
+" А эти настройки лучше бы смотрелись в keymaps.vim, но так будет непонятно к
+" какому плагину они относятся
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <CR> pumvisible() ? asyncomplete#close_popup() : "\<CR>"
 imap <C-@> <Plug>(asyncomplete_force_refresh)
+
+call asyncomplete#register_source(asyncomplete#sources#buffer#get_source_options({
+    \ 'name': 'buffer',
+    \ 'allowlist': ['*'],
+    \ 'blocklist': ['go'],
+    \ 'completor': function('asyncomplete#sources#buffer#completor'),
+    \ 'config': {
+    \    'max_buffer_size': 5000000,
+    \  },
+    \ }))
+
+au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#file#get_source_options({
+    \ 'name': 'file',
+    \ 'allowlist': ['*'],
+    \ 'priority': 10,
+    \ 'completor': function('asyncomplete#sources#file#completor')
+    \ }))
 
 " airline
 set noshowmode
@@ -132,7 +155,8 @@ set laststatus=2
 set showtabline=2
 
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'gruvbox'
+" Эту настройку я в тему вынес
+"let g:airline_theme = ''
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#keymap#enabled = 1
