@@ -8,24 +8,22 @@
 git clone https://github.com/s3rgeym/vimrc.git ~/.vim
 ```
 
-### Зависимости
+### LSP
 
-Нечеткий поиск:
+**LSP** — это протокол, придуманный в Microsoft... Он предоставляет линтинг, автодополнение и рефакторинг. Для поддержки LSP в моем конфиге используется `vim-lsp`. Однако, он требует ручной настройки различных language server'ов. Для автоматической же я использую `vim-lsp-settings`. Для вывода результатов автоподстановки нужны `asyncomplete.vim` и `asyncomplete-lsp.vim`.
 
-```sh
-sudo pacman -S fzf
-```
-
-Поддержка Python:
+Для поддержки Python нужно поставить сл зависимости:
 
 ```sh
 sudo pacman -S python-lsp-server autopep8 flake8 python-pylint python-rope
 ```
 
-pipx (arch не позволяет ставить пакеты через pip):
+### Поиск по файлам, буферам
+
+fzf довольно полезная утилита, поэтому ее лучше поставить глобально:
 
 ```sh
-sudo pacman -S python-pipx
+sudo pacman -S fzf
 ```
 
 ### Переключение раскладки
