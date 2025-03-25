@@ -125,12 +125,6 @@ augroup END
 " autocompolete
 let g:asyncomplete_auto_completeopt = 1
 
-" А эти настройки лучше бы смотрелись в keymaps.vim, но так будет непонятно к
-" какому плагину они относятся
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <CR> pumvisible() ? asyncomplete#close_popup() : "\<CR>"
-imap <C-@> <Plug>(asyncomplete_force_refresh)
 
 call asyncomplete#register_source(asyncomplete#sources#buffer#get_source_options({
     \ 'name': 'buffer',
