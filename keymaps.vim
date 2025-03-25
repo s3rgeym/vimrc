@@ -18,11 +18,11 @@ nnoremap ; :
 inoremap <C-L> <C-^>
 
 " Выделить только что вставленный текст
-nnoremap <leader>V V`]
+nnoremap <leader>v V`]
 
 " Убрать подсветку результатов поиска
 " silent скрывает вывод команды
-nnoremap <silent> <leader>h :nohl<cr>
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l> 
 
 " Переход в нормальный режим
 inoremap <C-c> <Esc>
@@ -69,7 +69,7 @@ nnoremap <C-Left> :bp<CR>
 nnoremap <A-Up> <C-w>-
 nnoremap <A-Down> <C-w>+
 nnoremap <A-Right> <C-w><
-nnoremap <A-left> <C-w>>
+nnoremap <A-Left> <C-w>>
 
 " Выбрать буфер из списка
 nnoremap <leader>l :ls<CR>:b<Space>
