@@ -125,9 +125,6 @@ nnoremap <leader>tt :<C-u>term<CR>
 " Выход из режима редактирования во встроенном терминале
 tnoremap <C-[> <C-\><C-n>
 
-" Отладка
-nnoremap <leader>d :tab term pudb %<CR>
-
 " Скрыть/показать проводник
 nnoremap <silent> <leader>p :NERDTreeToggle<CR>
 
@@ -138,7 +135,7 @@ nnoremap <silent> <leader>b :Buffers<CR>
 nnoremap <silent> <leader>/ :BLines<CR>
 
 " Настройка клавиш для LSP
-function! Setup_LSP_Keymaps() abort
+function! SetupLspKeymaps() abort
   " Навигация
   nmap <buffer> gd <plug>(lsp-definition)
   nmap <buffer> gs <plug>(lsp-document-symbol-search)
