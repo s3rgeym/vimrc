@@ -28,9 +28,21 @@ nnoremap <silent> <leader>h :nohl<cr>
 inoremap <C-c> <Esc>
 vnoremap <C-c> <Esc>
 
+" Сохранение изменений
+nnoremap <C-s> :w<CR>
+inoremap <C-s> <C-o>:w<CR>
+
+" Закрытие окна
+nnoremap <C-q> :q!<CR>
+inoremap <C-q> <Esc>:q!<CR>
+
 " Выделение всего текста
 nnoremap <C-a> ggVG
 inoremap <C-a> <Esc>ggVG
+
+" Отменить изменения (Ctrl-r после отмены повторяет изменения)
+nnoremap <C-z> :undo<CR>
+inoremap <C-z> <C-o>:undo<CR>
 
 " Добавление и удаление отступов
 nnoremap > >>
@@ -63,8 +75,8 @@ nnoremap <A-left> <C-w>>
 nnoremap <leader>l :ls<CR>:b<Space>
 
 " Закрыть буфер
-noremap <C-q> :bd!<CR>
-inoremap <C-q> <Esc>:bd!<CR>
+noremap <C-x> :bd!<CR>
+inoremap <C-x> <Esc>:bd!<CR>
 
 " Открыть новую вкладку
 nnoremap <leader>t :tabnew<CR>
@@ -99,11 +111,6 @@ nnoremap <leader>0 :tablast<CR>
 " Скрыть/раскрыть блок кода
 nnoremap <leader>z za
 
-" Сохранение и закрытие
-nnoremap <leader>w :w<CR>
-nnoremap <leader>q :q<CR>
-nnoremap <leader>Q :qa<CR>
-
 " Сохранить файлов с sudo
 cmap w!! w !sudo tee > /dev/null %
 
@@ -123,7 +130,7 @@ nnoremap <C-t> :<C-u>term<CR>
 
 " Выход из режима редактирования во встроенном терминале
 " На <Esc> эту связку почему-то нельзя повесить
-tnoremap <C-[> <C-\><C-n>
+tnoremap <C-t> <C-\><C-n>:q<CR>
 
 " Скрыть/показать боковую панель с файлами
 nnoremap <silent> <leader>n :NERDTreeToggle<CR>
