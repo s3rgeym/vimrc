@@ -9,10 +9,10 @@ if !exists('$MYVIMRC')
 endif
 
 " чтобы открыть файл под курсором используй gf
-source ~/.vim/plugins.vim
+source ~/.vim/config/plugins.vim
 
 " основные настройки должны идти после плагинов, тк в них многое может быть переопределено в плагинах
-source ~/.vim/options.vim
-source ~/.vim/mappings.vim
-source ~/.vim/theme.vim
-source ~/.vim/misc.vim
+source ~/.vim/config/options.vim
+source ~/.vim/config/mappings.vim
+source ~/.vim/config/theme.vim
+source ~/.vim/config/misc.vim
