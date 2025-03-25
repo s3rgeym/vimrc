@@ -13,6 +13,6 @@ source ~/.vim/plugins.vim
 
 " основные настройки должны идти после плагинов, тк в них многое может быть переопределено в плагинах
 source ~/.vim/options.vim
-source ~/.vim/keymaps.vim
+source ~/.vim/mappings.vim
 source ~/.vim/theme.vim
 source ~/.vim/misc.vim
