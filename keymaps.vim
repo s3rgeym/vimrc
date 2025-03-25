@@ -69,11 +69,11 @@ nnoremap <leader>l :ls<CR>:b<Space>
 noremap <C-x> :bp<cr>:bd #<cr>
 inoremap <C-x> <Esc>:bp<cr>:bd #<cr>
 
+" Открыть новую вкладку
+nnoremap <leader>t :tabnew<CR>
+
 " Список вкладок
 nnoremap <leader>tl :tabs<CR>
-
-" Открыть новую вкладку
-nnoremap <leader>tn :tabnew<CR>
 
 " Закрыть текущую вкладку
 nnoremap <leader>tc :tabclose<CR>
