@@ -22,11 +22,20 @@ Plug 'preservim/nerdtree'
 "Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
+" Более перспективный, но требует Rust
+"Plug 'liuchengxu/vim-clap'
+
 " Автоматическое закрытие парных скобок
 Plug 'jiangmiao/auto-pairs'
 
+" Позволяет быстро подставлять теги, кавычки и тп
+Plug 'tpope/vim-surround'
+
 " gc, gcc — для комментаривания
 Plug 'tpope/vim-commentary'
+
+" Заменяет аббревиатуры на разметку с `<C-Y>,`
+Plug 'mattn/emmet-vim'
 
 " Git интеграция
 Plug 'airblade/vim-gitgutter'
