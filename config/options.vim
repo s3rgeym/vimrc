@@ -79,8 +79,11 @@ set incsearch
 " Установить кодировку текста редактора в UTF-8
 set encoding=utf-8
 
-" Установить кодировку сохраняемых файлов в UTF-8
-set fileencoding=utf-8
+" Fix: E21: Cannot make changes, 'modifiable' is off:
+if !&readonly && &modifiable
+  " Установить кодировку сохраняемых файлов в UTF-8
+  set fileencoding=utf-8
+endif
 
 " Определить список кодировок для автоматического определения файла
 set fileencodings=utf-8,cp1251,koi8-r,cp866
