@@ -18,17 +18,19 @@ git clone https://github.com/s3rgeym/vimrc.git ~/.vim
 sudo pacman -S python-lsp-server autopep8 flake8 python-pylint python-rope
 ```
 
-Для VimScript, если подключен `archlinuxcn` или `chaotic-aur`:
+Для VimScript, если подключен репозиторий `archlinuxcn` или `chaotic-aur`:
 
 ```sh
 sudo pacman -S vim-language-server
 ```
 
-Языковые сервера так же можно поставить из Vim: 
+Языковые сервера так же можно ставить прямо из Vim: 
 
 ```vim
 :LspInstallServer vim-language-server
 ```
+
+Но я считаю способ через пакетный менеджер самым предпочтительным. Через него можно так же ставить плагины для Vim, но в репозиториях арча нет всех нужных.
 
 ### Поиск по файлам, буферам
 
