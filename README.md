@@ -68,7 +68,7 @@ packadd thermdebug
 
 * [Python Debugging With Pdb](https://realpython.com/python-debugging-pdb/) (статья написана не индусом, что уже ее делает хорошей)
 
-Так же можно использовать [pudb](https://documen.tician.de/pudb/) — лучший отладичк питоновского кода для терминала.
+Так же можно использовать [pudb](https://documen.tician.de/pudb/) — лучший отладчик питоновского кода для терминала.
 
 Его лучше поставить через `pipx` так как версия в репозитории арча, внезапно, нерабочая:
 
@@ -88,7 +88,7 @@ nnoremap <leader>pd :term pudb %<CR>
 
 #### vimspector
 
-[vimspector](https://github.com/puremourning/vimspector) — это порт стандартного отладчик VSCode для Vim. Главным его недостатком является использование **Node.js**, а достоинством — универсальность.
+[vimspector](https://github.com/puremourning/vimspector) — это порт стандартного отладчика VSCode для Vim. Главным его недостатком является использование **Node.js**, а достоинством — универсальность.
 
 ```vim
 Plug 'puremourning/vimspector'
