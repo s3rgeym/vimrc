@@ -1,6 +1,7 @@
 " Полезные ссылки (можно открыть в дефолтном браузере с помощью gx):
 " https://ru.wikibooks.org/wiki/Vim
 " https://learnxinyminutes.com/vimscript/
+
 " отключаем режим совместимости с vi
 set nocompatible
 
