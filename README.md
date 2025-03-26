@@ -22,10 +22,8 @@ sudo pacman -S python-lsp-server autopep8 flake8 python-pylint python-rope
 
 ### Поиск по файлам, буферам
 
-fzf довольно полезная утилита, поэтому ее лучше поставить глобально:
-
 ```sh
-sudo pacman -S fzf
+sudo pacman -S fzf ripgrep
 ```
 
 ### Переключение раскладки
