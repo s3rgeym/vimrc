@@ -4,6 +4,8 @@ if empty(glob('~/.vim/autoload/plug.vim'))
         \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 endif
 
+"echo "Значение MYVIMRC: " . $MYVIMRC
+
 " Автоустановка плагинов
 autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
       \| PlugInstall --sync | source $MYVIMRC
