@@ -30,6 +30,8 @@ vnoremap > >gv
 nnoremap <C-a> ggVG
 inoremap <C-a> <Esc>ggVG
 
+" С помощью `source $VIMRUNTIME/mswin.vim` можно добавить все стандартные сочтения для Windows 
+
 " Выделение последнего вставленного текста
 nnoremap <leader>v V`]
 
