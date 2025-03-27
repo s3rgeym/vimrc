@@ -1,5 +1,7 @@
 ## README
 
+### О конфиге
+
 Мой конфиг, который превращает Vim в IDE (vim-lsp + autocomplete вместо громоздких ale + coc.nvim).
 
 Чтобы скопировать себе:
@@ -140,3 +142,7 @@ let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
   }
 }
 ```
+
+### Заметки
+
+* [Как пользоваться макросами](https://learnbyexample.github.io/vim_reference/Macro.html)
