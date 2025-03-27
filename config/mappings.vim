@@ -33,7 +33,7 @@ inoremap <C-a> <Esc>ggVG
 " С помощью `source $VIMRUNTIME/mswin.vim` можно добавить все стандартные сочтения для Windows
 
 " Выделение последнего вставленного текста
-nnoremap <leader>v V`]
+nnoremap <leader>V V`]
 
 " -----------------------------------------------
 "  Работа с файлами
@@ -63,7 +63,10 @@ nnoremap <A-Right> <C-w><
 nnoremap <A-Left> <C-w>>
 
 " Разделение окон
-nnoremap <leader><CR> :vsplit<CR>
+nnoremap <leader>h :split<CR>
+nnoremap <leader>- :split<CR>
+nnoremap <leader>v :vsplit<CR>
+nnoremap <leader>\ :vsplit<CR>
 
 " -----------------------------------------------
 "  Управление вкладками
