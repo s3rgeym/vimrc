@@ -1,7 +1,3 @@
-" Полезные ссылки (можно открыть в дефолтном браузере с помощью gx):
-" https://ru.wikibooks.org/wiki/Vim
-" https://learnxinyminutes.com/vimscript/
-
 " отключаем режим совместимости с vi
 set nocompatible
 
@@ -12,7 +8,7 @@ if !exists('$MYVIMRC')
   let $MYVIMRC = expand('<sfile>:p')
 endif
 
-" gf откроет файл в редакторе
+" gf откроет файл в редакторе (а gx открывает ссылку)
 source ~/.vim/config/plugins.vim
 
 " Основные настройки должны идти после плагинов, тк в них многое может быть переопределено в плагинах
