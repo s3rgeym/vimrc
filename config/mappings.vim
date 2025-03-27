@@ -104,8 +104,10 @@ nnoremap <C-Left> :bp<CR>
 " Просмотр и выбор буферов
 nnoremap <leader>l :ls<CR>:b<Space>
 
-" Закрытие буферов
+" Закрытие окон
 nnoremap Q :q!<CR>
+
+" Удаление буферов
 noremap <C-x> :bd!<CR>
 inoremap <C-x> <Esc>:bd!<CR>
 
