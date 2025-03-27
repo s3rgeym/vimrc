@@ -30,7 +30,7 @@ vnoremap > >gv
 nnoremap <C-a> ggVG
 inoremap <C-a> <Esc>ggVG
 
-" С помощью `source $VIMRUNTIME/mswin.vim` можно добавить все стандартные сочтения для Windows 
+" С помощью `source $VIMRUNTIME/mswin.vim` можно добавить все стандартные сочтения для Windows
 
 " Выделение последнего вставленного текста
 nnoremap <leader>v V`]
@@ -100,6 +100,8 @@ nnoremap <leader>0 :tablast<CR>
 " Навигация по буферам
 nnoremap <C-Right> :bn<CR>
 nnoremap <C-Left> :bp<CR>
+nnoremap <Tab> :bn<CR>
+nnoremap <S-Tab> :bp<CR>
 
 " Просмотр и выбор буферов
 nnoremap <leader>l :ls<CR>:b<Space>
