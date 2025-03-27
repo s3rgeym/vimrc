@@ -71,6 +71,7 @@ nnoremap <leader><CR> :vsplit<CR>
 
 " Навигация по вкладкам
 " Можно использовать встроенные Ctrl + PageUp/PageDown
+" По умолчанию на эти клавиши повешана прокрутка
 nnoremap <C-Up> :tabprevious<CR>
 nnoremap <C-Down> :tabnext<CR>
 
@@ -99,8 +100,9 @@ nnoremap <leader>0 :tablast<CR>
 " -----------------------------------------------
 
 " Навигация по буферам
-nnoremap <C-Right> :bn<CR>
-nnoremap <C-Left> :bp<CR>
+" Эти клавиши используются для навигации по словам
+"nnoremap <C-Right> :bn<CR>
+"nnoremap <C-Left> :bp<CR>
 nnoremap <Tab> :bn<CR>
 nnoremap <S-Tab> :bp<CR>
 
