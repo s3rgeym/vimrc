@@ -145,4 +145,5 @@ let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
 
 ### Заметки
 
+* [Кратко о Vim](https://ru.wikibooks.org/wiki/Vim)
 * [Как пользоваться макросами](https://learnbyexample.github.io/vim_reference/Macro.html)
