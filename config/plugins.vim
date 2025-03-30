@@ -94,7 +94,7 @@ function! s:setup_lsp() abort
   call SetupLspKeymaps()
 
   " Форматирование
-  autocmd BufWritePre <buffer> LspDocumentFormat
+  autocmd BufWritePre <buffer> silent! LspDocumentFormat
 endfunction
 
 augroup lsp_config

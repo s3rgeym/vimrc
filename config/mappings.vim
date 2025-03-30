@@ -51,10 +51,14 @@ cmap w!! w !sudo tee > /dev/null %
 " -----------------------------------------------
 
 " Перемещение между окнами
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+" nnoremap <C-h> <C-w>h
+" nnoremap <C-j> <C-w>j
+" nnoremap <C-k> <C-w>k
+" nnoremap <C-l> <C-w>l
+nnoremap <C-Left> <C-w>h
+nnoremap <C-Down> <C-w>j
+nnoremap <C-Up> <C-w>k
+nnoremap <C-Right> <C-w>l
 
 " Изменение размеров окон
 nnoremap <A-Up> <C-w>-
@@ -63,6 +67,8 @@ nnoremap <A-Right> <C-w><
 nnoremap <A-Left> <C-w>>
 
 " Разделение окон
+" <leader>s неудобно использовать, так как он есть сочетание с <leader>sv и
+" вместо применения конфига, часто будет просходить разбиение экрана
 nnoremap <leader>h :split<CR>
 nnoremap <leader>- :split<CR>
 nnoremap <leader>v :vsplit<CR>
@@ -75,8 +81,8 @@ nnoremap <leader>\ :vsplit<CR>
 " Навигация по вкладкам
 " Можно использовать встроенные Ctrl + PageUp/PageDown
 " По умолчанию на эти клавиши повешана прокрутка
-nnoremap <C-Up> :tabprevious<CR>
-nnoremap <C-Down> :tabnext<CR>
+" nnoremap <C-Up> :tabprevious<CR>
+" nnoremap <C-Down> :tabnext<CR>
 
 " Создание и управление вкладками
 nnoremap <leader>t :tabnew<CR>
@@ -124,7 +130,7 @@ inoremap <C-x> <Esc>:bd!<CR>
 " -----------------------------------------------
 
 " Отключение подсветки результатов поиска
-nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+nnoremap <silent> <leader><cr> :<C-u>nohlsearch<CR>
 
 " -----------------------------------------------
 "  Переключение режимов
