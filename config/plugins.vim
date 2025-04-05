@@ -52,7 +52,7 @@ Plug 'prabirshrestha/asyncomplete-buffer.vim'
 Plug 'prabirshrestha/asyncomplete-file.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 
-" Подсветка цветов
+" Подсветка имен и кодов цветов
 Plug 'ap/vim-css-color'
 
 " Поддержка .editorconfig
