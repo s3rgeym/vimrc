@@ -12,9 +12,6 @@ let g:mapleader = "\<Space>"
 " Быстрое переключение в режим вставки без автоформатирования
 set pastetoggle=<F2>
 
-" Упрощение ввода команд (замена Shift+; на ;)
-" Примечание: может конфликтовать с vim-sneak
-nnoremap ; :
 
 " -----------------------------------------------
 "  Управление текстом и отступами
@@ -51,14 +48,14 @@ cmap w!! w !sudo tee > /dev/null %
 " -----------------------------------------------
 
 " Перемещение между окнами
-"nnoremap <C-h> <C-w>h
-"nnoremap <C-j> <C-w>j
-"nnoremap <C-k> <C-w>k
-"nnoremap <C-l> <C-w>l
-nnoremap <C-Left> <C-w>h
-nnoremap <C-Down> <C-w>j
-nnoremap <C-Up> <C-w>k
-nnoremap <C-Right> <C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+" nnoremap <C-Left> <C-w>h
+" nnoremap <C-Down> <C-w>j
+" nnoremap <C-Up> <C-w>k
+" nnoremap <C-Right> <C-w>l
 
 " Изменение размеров окон
 nnoremap <A-Up> <C-w>-
@@ -81,8 +78,8 @@ nnoremap <leader>\ :vsplit<CR>
 " Навигация по вкладкам
 " Можно использовать встроенные Ctrl + PageUp/PageDown
 " По умолчанию на эти клавиши повешана прокрутка
-"nnoremap <C-Up> :tabprevious<CR>
-"nnoremap <C-Down> :tabnext<CR>
+nnoremap <C-Up> :tabprevious<CR>
+nnoremap <C-Down> :tabnext<CR>
 
 " Создание и управление вкладками
 nnoremap <leader>t :tabnew<CR>
@@ -110,13 +107,13 @@ nnoremap <leader>0 :tablast<CR>
 
 " Навигация по буферам
 " Эти клавиши используются для навигации по словам
-"nnoremap <C-Right> :bn<CR>
-"nnoremap <C-Left> :bp<CR>
-nnoremap <Tab> :bn<CR>
-nnoremap <S-Tab> :bp<CR>
+" nnoremap <Tab> :bn<CR>
+" nnoremap <S-Tab> :bp<CR>
+nnoremap <C-Right> :bn<CR>
+nnoremap <C-Left> :bp<CR>
 
 " Просмотр и выбор буферов
-nnoremap <leader>l :ls<CR>:b<Space>
+"nnoremap <leader>b :ls<CR>:b<Space>
 
 " Закрытие окон
 nnoremap Q :q!<CR>
@@ -130,7 +127,7 @@ inoremap <C-x> <Esc>:bd!<CR>
 " -----------------------------------------------
 
 " Отключение подсветки результатов поиска
-nnoremap <silent> <leader><cr> :<C-u>nohlsearch<CR>
+nnoremap <silent> <leader>/ :nohl<CR>
 
 " -----------------------------------------------
 "  Переключение режимов
@@ -184,7 +181,7 @@ nnoremap <silent> <leader>r :Rg<CR>
 nnoremap <silent> <leader>b :Buffers<CR>
 
 " Поиск по текущему файлу
-nnoremap <silent> <leader>/ :BLines<CR>
+nnoremap <silent> <leader>l :BLines<CR>
 
 " -----------------------------------------------
 "  LSP (Language Server Protocol)
