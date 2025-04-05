@@ -150,7 +150,7 @@ set mouse=a
 set ttymouse=sgr
 
 " Использовать системный буфер обмена
-set clipboard^=unnamed,unnamedplus
+set clipboard=unnamedplus
 
 " Убираем артефакты терминала
 " https://github.com/kovidgoyal/kitty/issues/1536
@@ -178,3 +178,19 @@ set iminsert=0
 
 " Установить английский язык поиска по умолчанию
 set imsearch=0
+
+
+" Цветовая палитра
+if exists('+termguicolors')
+    set termguicolors
+else
+    set t_Co=256
+endif
+
+syntax enable
+set background=dark
+silent! colorscheme gruvbox
+
+
+" Перезапускаем kitty при изменении конфига
+autocmd BufWritePost ~/.config/kitty/kitty.conf silent !pkill -SIGUSR1 kitty

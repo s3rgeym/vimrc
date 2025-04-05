@@ -131,11 +131,10 @@ set laststatus=2
 set showtabline=2
 
 let g:airline_powerline_fonts = 1
-" Эту настройку я в тему вынес
-"let g:airline_theme = ''
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#keymap#enabled = 1
+let g:airline_theme = 'gruvbox'
 
 " devicons
 let g:webdevicons_enable = 1
