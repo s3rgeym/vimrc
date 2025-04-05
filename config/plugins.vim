@@ -52,6 +52,9 @@ Plug 'prabirshrestha/asyncomplete-buffer.vim'
 Plug 'prabirshrestha/asyncomplete-file.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 
+" Подсветка цветов
+Plug 'ap/vim-css-color'
+
 " Поддержка .editorconfig
 Plug 'editorconfig/editorconfig-vim'
 
@@ -130,10 +133,11 @@ set noshowmode
 set laststatus=2
 set showtabline=2
 
-let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#keymap#enabled = 1
+
+let g:airline_powerline_fonts = 1
 let g:airline_theme = 'gruvbox'
 
 " devicons
