@@ -37,8 +37,8 @@ nnoremap <leader>V V`]
 " -----------------------------------------------
 
 " Быстрое сохранение
-nnoremap <C-s> :w<CR>
-inoremap <C-s> <C-o>:w<CR>
+nnoremap <C-s> :w<cr>
+inoremap <C-s> <C-o>:w<cr>
 
 " Сохранение с правами root
 cmap w!! w !sudo tee > /dev/null %
@@ -66,28 +66,27 @@ nnoremap <A-Left> <C-w>>
 " Разделение окон
 " <leader>s неудобно использовать, так как он есть сочетание с <leader>sv и
 " вместо применения конфига, часто будет просходить разбиение экрана
-nnoremap <leader>h :split<CR>
-nnoremap <leader>- :split<CR>
-nnoremap <leader>v :vsplit<CR>
-nnoremap <leader>\ :vsplit<CR>
+nnoremap <leader>s :split<cr>
+"nnoremap <leader>- :split<cr>
+nnoremap <leader>v :vsplit<cr>
+"nnoremap <leader>\ :vsplit<cr>
 
 " -----------------------------------------------
 "  Управление вкладками
 " -----------------------------------------------
 
 " Навигация по вкладкам
-" Можно использовать встроенные Ctrl + PageUp/PageDown
-" По умолчанию на эти клавиши повешана прокрутка
-nnoremap <C-Up> :tabprevious<CR>
-nnoremap <C-Down> :tabnext<CR>
+" Для переключения между табами можно использовать Ctrl + PageUp/PageDown
+nnoremap <Tab> :tabnext<cr>
+nnoremap <S-Tab> :tabprev<cr>
 
 " Создание и управление вкладками
-nnoremap <leader>t :tabnew<CR>
-nnoremap <leader>tl :tabs<CR>
-nnoremap <leader>tc :tabclose<CR>
-nnoremap <leader>to :tabonly<CR>
-nnoremap <leader>tm :tabmove<CR>
-nnoremap <leader>te :tabedit<Bar>
+nnoremap <leader>t :tabnew<cr>
+nnoremap <leader>tl :tabs<cr>
+nnoremap <leader>tc :tabclose<cr>
+nnoremap <leader>to :tabonly<cr>
+nnoremap <leader>tm :tabmove<cr>
+nnoremap <leader>te :tabedit<bar>
 
 " Быстрый переход по вкладкам (1-9)
 nnoremap <leader>1 1gt
@@ -99,31 +98,30 @@ nnoremap <leader>6 6gt
 nnoremap <leader>7 7gt
 nnoremap <leader>8 8gt
 nnoremap <leader>9 9gt
-nnoremap <leader>0 :tablast<CR>
+nnoremap <leader>0 :tablast<cr>
 
 " -----------------------------------------------
 "  Работа с буферами
 " -----------------------------------------------
 
 " Навигация по буферам
-" Эти клавиши используются для навигации по словам
-" nnoremap <Tab> :bn<CR>
-" nnoremap <S-Tab> :bp<CR>
-nnoremap <C-Right> :bn<CR>
-nnoremap <C-Left> :bp<CR>
+" По умолчанию на эти клавиши повешана прокрутка
+" Ctrl + Left/Right для перемещения по словам используется, что удобно
+nnoremap <C-Up> :bp<cr>
+nnoremap <C-Down> :bn<cr>
 
 " Просмотр и выбор буферов
-"nnoremap <leader>b :ls<CR>:b<Space>
+"nnoremap <leader>b :ls<cr>:b<Space>
 
 " Закрытие буфера
-nnoremap Q :bd!<CR>
+nnoremap bd :bd!<cr>
 
 " -----------------------------------------------
 "  Поиск
 " -----------------------------------------------
 
 " Отключение подсветки результатов поиска
-nnoremap <silent> <leader>/ :nohl<CR>
+nnoremap <silent> <leader>h :nohl<cr>
 
 " -----------------------------------------------
 "  Переключение режимов
@@ -138,17 +136,17 @@ vnoremap <C-c> <Esc>
 " -----------------------------------------------
 
 " Редактирование конфигурации
-nnoremap <leader>ev :edit $MYVIMRC<CR>
+nnoremap <leader>e :edit $MYVIMRC<cr>
 
 " Применение изменений конфигурации
-nnoremap <leader>sv :so $MYVIMRC<CR>
+nnoremap <leader>r :so $MYVIMRC<cr>
 
 " -----------------------------------------------
 "  Интеграция с терминалом
 " -----------------------------------------------
 
 " Открытие встроенного терминала
-nnoremap <C-t> :<C-u>term<CR>
+nnoremap <C-t> :<C-u>term<cr>
 
 " Выход из режима терминала
 tnoremap <C-t> <C-\><C-n>
@@ -161,23 +159,23 @@ tnoremap <C-t> <C-\><C-n>
 "  NERDTree
 " -----------------------------------------------
 
-nnoremap <silent> <leader>n :NERDTreeToggle<CR>
+nnoremap <silent> <leader>n :NERDTreeToggle<cr>
 
 " -----------------------------------------------
 "  fzf
 " -----------------------------------------------
 
 " Поиск по файлам
-nnoremap <silent> <leader>f :Files<CR>
+nnoremap <silent> <leader>p :Files<cr>
 
 " Поиск по содержимому (ripgrep)
-nnoremap <silent> <leader>r :Rg<CR>
+nnoremap <silent> <leader>f :Rg<cr>
 
-" Поиск по открытым буферам
-nnoremap <silent> <leader>b :Buffers<CR>
+" Выбор буфера
+nnoremap <silent> <leader>b :Buffers<cr>
 
 " Поиск по текущему файлу
-nnoremap <silent> <leader>l :BLines<CR>
+nnoremap <silent> <leader>/ :BLines<cr>
 
 " -----------------------------------------------
 "  LSP (Language Server Protocol)
@@ -214,7 +212,7 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " Подтверждение выбора
-inoremap <expr> <CR> pumvisible() ? asyncomplete#close_popup() : "\<CR>"
+inoremap <expr> <cr> pumvisible() ? asyncomplete#close_popup() : "\<CR>"
 
 " Принудительное обновление автодополнения
 imap <C-@> <Plug>(asyncomplete_force_refresh)
