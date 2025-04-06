@@ -81,7 +81,7 @@ nnoremap <Tab> :tabnext<cr>
 nnoremap <S-Tab> :tabprev<cr>
 
 " Создание и управление вкладками
-nnoremap <leader>t :tabnew<cr>
+nnoremap <leader>tn :tabnew<cr>
 nnoremap <leader>tl :tabs<cr>
 nnoremap <leader>tc :tabclose<cr>
 nnoremap <leader>to :tabonly<cr>
