@@ -115,12 +115,8 @@ nnoremap <C-Left> :bp<CR>
 " Просмотр и выбор буферов
 "nnoremap <leader>b :ls<CR>:b<Space>
 
-" Закрытие окон
-nnoremap Q :q!<CR>
-
-" Удаление буферов
-noremap <C-x> :bd!<CR>
-inoremap <C-x> <Esc>:bd!<CR>
+" Закрытие буфера
+nnoremap Q :bd!<CR>
 
 " -----------------------------------------------
 "  Поиск
@@ -142,7 +138,7 @@ vnoremap <C-c> <Esc>
 " -----------------------------------------------
 
 " Редактирование конфигурации
-nnoremap <leader>ev :tabedit $MYVIMRC<CR>
+nnoremap <leader>ev :edit $MYVIMRC<CR>
 
 " Применение изменений конфигурации
 nnoremap <leader>sv :so $MYVIMRC<CR>
