@@ -180,17 +180,5 @@ set iminsert=0
 set imsearch=0
 
 
-" Цветовая палитра
-if exists('+termguicolors')
-    set termguicolors
-else
-    set t_Co=256
-endif
-
-syntax enable
-set background=dark
-silent! colorscheme gruvbox
-
-
 " Перезапускаем kitty при изменении конфига
 autocmd BufWritePost ~/.config/kitty/kitty.conf silent !pkill -SIGUSR1 kitty
