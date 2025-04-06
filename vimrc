@@ -11,7 +11,7 @@ endif
 " gf откроет файл в редакторе
 source ~/.vim/config/plugins.vim
 
-" Основные настройки должны идти после плагинов, тк в них многое может быть переопределено в плагинах
+" Основные настройки должны идти после плагинов, тк многое может быть переопределено в плагинах
 source ~/.vim/config/options.vim
 source ~/.vim/config/maps.vim
 source ~/.vim/config/theme.vim
