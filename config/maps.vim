@@ -139,7 +139,7 @@ vnoremap <C-c> <Esc>
 nnoremap <leader>e :edit $MYVIMRC<cr>
 
 " Применение изменений конфигурации
-nnoremap <leader>r :so $MYVIMRC<cr>
+nnoremap <leader>rc :so $MYVIMRC<cr>
 
 " -----------------------------------------------
 "  Интеграция с терминалом
@@ -166,16 +166,16 @@ nnoremap <silent> <leader>n :NERDTreeToggle<cr>
 " -----------------------------------------------
 
 " Поиск по файлам
-nnoremap <silent> <leader>p :Files<cr>
+nnoremap <silent> <leader>f :Files<cr>
 
 " Поиск по содержимому (ripgrep)
-nnoremap <silent> <leader>f :Rg<cr>
+nnoremap <silent> <leader>/ :Rg<cr>
 
 " Выбор буфера
 nnoremap <silent> <leader>b :Buffers<cr>
 
 " Поиск по текущему файлу
-nnoremap <silent> <leader>/ :BLines<cr>
+"nnoremap <silent> <leader>/ :BLines<cr>
 
 " -----------------------------------------------
 "  LSP (Language Server Protocol)
