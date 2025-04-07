@@ -40,9 +40,12 @@ nnoremap <leader>v :vsplit<cr>
 nnoremap <Tab> :tabnext<cr>
 nnoremap <S-Tab> :tabprev<cr>
 
-" Работа с буферами
+" Переключение между буферами
+" На Ctrl-Влево/Вправо лучше ничего не вешать, так как они нужны для перемещения по словам, а эти сочетания — как доп-ые для прокрутки
 nnoremap <C-Up> :bp<cr>
 nnoremap <C-Down> :bn<cr>
+
+" Удаление буфера
 nnoremap bd :bd!<cr>
 
 " Поиск
@@ -54,7 +57,8 @@ vnoremap <C-c> <Esc>
 
 " Редактировать конфиг Vim
 nnoremap <leader>ev :edit $MYVIMRC<cr>
-" Применить изменения
+
+" Применить изменения конфига Vim
 nnoremap <leader>sv :so $MYVIMRC<cr>
 
 " Интегрированный терминал
