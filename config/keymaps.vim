@@ -66,7 +66,7 @@ nnoremap <C-t> :<C-u>term<cr>
 tnoremap <C-t> <C-\><C-n>
 
 " NERDTree
-nnoremap <silent> <leader>n :NERDTreeToggle<cr>
+nnoremap <silent> <leader>p :NERDTreeToggle<cr>
 
 " Поиск
 nnoremap <silent> <leader>f :Files<cr>
