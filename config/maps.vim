@@ -69,7 +69,7 @@ nnoremap <silent> <leader>f :Files<cr>
 nnoremap <silent> <leader>/ :Rg<cr>
 nnoremap <silent> <leader>b :Buffers<cr>
 
-" Настройки LSP
+" LSP
 function! SetupLspKeymaps() abort
   nmap <buffer> gd <plug>(lsp-definition)
   nmap <buffer> gs <plug>(lsp-document-symbol-search)
