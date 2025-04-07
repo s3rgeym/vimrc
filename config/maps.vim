@@ -214,5 +214,5 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " Подтверждение выбора
 inoremap <expr> <cr> pumvisible() ? asyncomplete#close_popup() : "\<CR>"
 
-" Принудительное обновление автодополнения
+" Показать варианты дополнения
 imap <C-@> <Plug>(asyncomplete_force_refresh)
