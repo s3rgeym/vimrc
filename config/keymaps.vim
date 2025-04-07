@@ -15,7 +15,7 @@ inoremap <C-a> <Esc>ggVG
 " Выделить вставленный текст
 nnoremap <leader>V V`]
 
-" Сохранение файлов 
+" Сохранение файлов
 nnoremap <C-s> :w<cr>
 inoremap <C-s> <C-o>:w<cr>
 cmap w!! w !sudo tee > /dev/null %
@@ -36,14 +36,10 @@ nnoremap <A-Left> <C-w>>
 nnoremap <leader>s :split<cr>
 nnoremap <leader>v :vsplit<cr>
 
-" Управление вкладками
-nnoremap <Tab> :tabnext<cr>
-nnoremap <S-Tab> :tabprev<cr>
-
 " Переключение между буферами
-" На Ctrl-Влево/Вправо лучше ничего не вешать, так как они нужны для перемещения по словам, а эти сочетания — как доп-ые для прокрутки
-nnoremap <C-Up> :bp<cr>
-nnoremap <C-Down> :bn<cr>
+" Можно использовать Ctrl+Up/Down, на которые навешена прокрутка
+nnoremap <Tab> :bn<cr>
+nnoremap <S-Tab> :bp<cr>
 
 " Удаление буфера
 nnoremap bd :bd!<cr>
