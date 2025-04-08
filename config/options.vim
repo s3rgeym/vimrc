@@ -161,6 +161,7 @@ let &t_SI = "\e[6 q" " INSERT mode
 let &t_SR = "\e[4 q" " REPLACE mode
 let &t_EI = "\e[2 q" " NORMAL mode
 
+" Решение проблемы с подчеркиванием ошибок через undercurl
 " https://github.com/vim/vim/issues/12744
 let &t_Cs="\<Esc>[4:3m"
 
