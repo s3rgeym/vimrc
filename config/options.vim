@@ -180,5 +180,9 @@ set iminsert=0
 set imsearch=0
 
 
+" Прочее
+" Применяем изменения в конфиге
+au! BufWritePost $MYVIMRC source $MYVIMRC
+
 " Перезапускаем kitty при изменении конфига
 autocmd BufWritePost ~/.config/kitty/kitty.conf silent !pkill -SIGUSR1 kitty
