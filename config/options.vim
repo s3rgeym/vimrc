@@ -181,6 +181,10 @@ set iminsert=0
 set imsearch=0
 
 
+" SpellCheck
+set spell spelllang=en_us,ru_ru
+
+
 " Работа с конфигами
 " Применяем изменения в конфиге
 au! BufWritePost $MYVIMRC source $MYVIMRC
