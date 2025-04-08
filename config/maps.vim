@@ -9,7 +9,7 @@ nnoremap <F6> :set spell!<CR>
 
 " Q вызывает бесполезный Ex mode
 " Удалить буфер
-nnoremap Q :bd!<cr>
+nnoremap Q :q<cr>
 
 " Добавление отступов
 nnoremap > >>
