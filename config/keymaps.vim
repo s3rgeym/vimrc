@@ -44,18 +44,20 @@ nnoremap <S-Tab> :bp<cr>
 " Удаление буфера
 nnoremap bd :bd!<cr>
 
-" Поиск
-nnoremap <silent> <leader>h :nohl<cr>
+" Убрать подсветку результатов поиска
+" Это сочетание может в плагинах использоваться
+"nnoremap <silent> <leader><leader> :nohl<cr>
+nnoremap <silent> \\ :nohl<cr>
 
 " Переключение режимов
 inoremap <C-c> <Esc>
 vnoremap <C-c> <Esc>
 
-" Редактировать конфиг Vim
-nnoremap <leader>ev :edit $MYVIMRC<cr>
+" Edit Vimrc
+nnoremap <leader>ev :tabedit $MYVIMRC<cr>
 
-" Применить изменения конфига Vim
-nnoremap <leader>sv :so $MYVIMRC<cr>
+" Realod Vimrc
+nnoremap <leader>rv :so $MYVIMRC<cr>
 
 " Интегрированный терминал
 nnoremap <C-t> :<C-u>term<cr>
