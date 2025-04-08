@@ -51,8 +51,8 @@ nnoremap bd :bd!<cr>
 nnoremap <silent> \\ :nohl<cr>
 
 " Переключение режимов
-inoremap <C-c> <Esc>
-vnoremap <C-c> <Esc>
+"inoremap <C-c> <Esc>
+"vnoremap <C-c> <Esc>
 
 " Edit Vimrc
 nnoremap <leader>ev :tabedit $MYVIMRC<cr>
