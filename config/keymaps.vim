@@ -9,6 +9,7 @@ vnoremap < <gv
 vnoremap > >gv
 
 " Выделить все
+" NOTE: `source $VIMRUNTIME/mswin.vim` добавит все привычные сочетания
 nnoremap <C-a> ggVG
 inoremap <C-a> <Esc>ggVG
 
