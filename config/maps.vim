@@ -52,7 +52,8 @@ nnoremap <Tab> :bn<cr>
 nnoremap <S-Tab> :bp<cr>
 
 " Удаление буфера
-nnoremap bd :bd!<cr>
+nnoremap bd :bd<cr>
+nnoremap BD :bd!<cr>
 
 " Убрать подсветку результатов поиска
 " Это сочетание может в плагинах использоваться
