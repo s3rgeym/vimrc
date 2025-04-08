@@ -1,11 +1,15 @@
-" Основные настройки
-let g:mapleader = "\<Space>"
+" Клавиша лидер для пользовательских сочетаний
+let g:mapleader = " "
 
 " Переключить автоформатирование при вставке
 set pastetoggle=<F2>
 
 " Переключить проверку орфографии
 nnoremap <F6> :set spell!<CR>
+
+" Q вызывает бесполезный Ex mode
+" Удалить буфер
+nnoremap Q :bd!<cr>
 
 " Добавление отступов
 nnoremap > >>
@@ -52,6 +56,7 @@ nnoremap bd :bd!<cr>
 
 " Убрать подсветку результатов поиска
 " Это сочетание может в плагинах использоваться
+" nnoremap <Esc> в Kitty не работает
 "nnoremap <silent> <leader><leader> :nohl<cr>
 nnoremap <silent> \\ :nohl<cr>
 

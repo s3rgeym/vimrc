@@ -191,8 +191,9 @@ set spelllang=en,ru
 
 
 " Работа с конфигами
+" Эта настройка бесполезна, так как я разбил vimrc на файлы
 " Применяем изменения в конфиге
-au! BufWritePost $MYVIMRC source $MYVIMRC
+"au! BufWritePost $MYVIMRC source $MYVIMRC
 
 " Перезапускаем kitty при изменении конфига
 autocmd BufWritePost ~/.config/kitty/kitty.conf silent !pkill -SIGUSR1 kitty
