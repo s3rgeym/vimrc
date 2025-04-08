@@ -161,6 +161,9 @@ let &t_SI = "\e[6 q" " INSERT mode
 let &t_SR = "\e[4 q" " REPLACE mode
 let &t_EI = "\e[2 q" " NORMAL mode
 
+" https://github.com/vim/vim/issues/12744
+let &t_Cs="\<Esc>[4:3m"
+
 " Установить задержку в миллисекундах для сочетаний клавиш
 set timeoutlen=500
 
@@ -182,7 +185,7 @@ set imsearch=0
 
 
 " Spell Check
-set spelllang=en_us,ru_ru
+set spelllang=en,ru
 "set spell
 
 
