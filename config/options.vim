@@ -162,7 +162,7 @@ let &t_SR = "\e[4 q" " REPLACE mode
 let &t_EI = "\e[2 q" " NORMAL mode
 
 " Установить задержку в миллисекундах для сочетаний клавиш
-set timeoutlen=750
+set timeoutlen=500
 
 " Включить выделение текста с помощью Shift и стрелок
 set keymodel=startsel,stopsel
