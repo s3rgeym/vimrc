@@ -56,9 +56,9 @@ nnoremap bd :bd<cr>
 nnoremap BD :bd!<cr>
 
 " Убрать подсветку результатов поиска
-" Это сочетание может в плагинах использоваться
 " nnoremap <Esc> в Kitty не работает
-"nnoremap <silent> <leader><leader> :nohl<cr>
+" Это сочетание может в плагинах использоваться
+nnoremap <silent> <leader><leader> :nohl<cr>
 nnoremap <silent> \\ :nohl<cr>
 
 " Edit Vimrc
