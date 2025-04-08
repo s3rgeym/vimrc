@@ -180,7 +180,7 @@ set iminsert=0
 set imsearch=0
 
 
-" Прочее
+" Работа с конфигами
 " Применяем изменения в конфиге
 au! BufWritePost $MYVIMRC source $MYVIMRC
 
