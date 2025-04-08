@@ -181,8 +181,9 @@ set iminsert=0
 set imsearch=0
 
 
-" SpellCheck
-set spell spelllang=en_us,ru_ru
+" Spell Check
+set spelllang=en_us,ru_ru
+"set spell
 
 
 " Работа с конфигами
