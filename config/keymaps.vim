@@ -51,8 +51,7 @@ nnoremap <S-Tab> :bp<cr>
 nnoremap <leader>s :split<cr>
 nnoremap <leader>v :vsplit<cr>
 
-" Закрыть буфер
-" NERDTree открывает файл в сплите (окне), просто :bd закрывает окно со всеми буферами в нем
+" Закрыть только текущий буфер
 "nnoremap <C-c> :bp \| bd #<cr>
 nnoremap <leader>d :bp\|bd #<cr>
 
