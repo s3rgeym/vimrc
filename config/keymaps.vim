@@ -52,6 +52,8 @@ nnoremap <leader>s :split<cr>
 nnoremap <leader>v :vsplit<cr>
 
 " Закрыть только текущий буфер
+" Из-за того, что NERDTree открывает файлы в сплитах, просто вызов :bd закрывает
+" все буферы
 "nnoremap <C-c> :bp<bar>bd #<cr>
 nnoremap <leader>d :bp\|bd #<cr>
 
