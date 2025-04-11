@@ -52,7 +52,7 @@ nnoremap <leader>s :split<cr>
 nnoremap <leader>v :vsplit<cr>
 
 " Закрыть только текущий буфер
-"nnoremap <C-c> :bp \| bd #<cr>
+"nnoremap <C-c> :bp<bar>bd #<cr>
 nnoremap <leader>d :bp\|bd #<cr>
 
 " Убрать подсветку результатов поиска
