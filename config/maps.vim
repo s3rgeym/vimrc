@@ -42,18 +42,17 @@ nnoremap <A-Down> <C-w>+
 nnoremap <A-Right> <C-w><
 nnoremap <A-Left> <C-w>>
 
-" Разделение окон
-nnoremap <leader>s :split<cr>
-nnoremap <leader>v :vsplit<cr>
-
 " Переключение между буферами
 " Можно использовать Ctrl+Up/Down, на которые навешена прокрутка
 nnoremap <Tab> :bn<cr>
 nnoremap <S-Tab> :bp<cr>
 
+" Разделение окон
+nnoremap <leader>s :split<cr>
+nnoremap <leader>v :vsplit<cr>
+
 " Удаление буфера
-nnoremap bd :bd<cr>
-nnoremap BD :bd!<cr>
+nnoremap <leader>d :bd!<cr>
 
 " Убрать подсветку результатов поиска
 " nnoremap <Esc> в Kitty не работает
