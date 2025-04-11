@@ -1,4 +1,4 @@
-" Основные настройки  
+" Основные настройки
 " Увеличить историю команд до 1000
 set history=1000
 
@@ -9,10 +9,10 @@ set hidden
 set noerrorbells
 
 " Отключить визуальные сигналы ошибок
-set novisualbell  
+set novisualbell
 
 
-" Интерфейс  
+" Интерфейс
 " Показывать номера строк
 set number
 
@@ -23,7 +23,7 @@ set list listchars=tab:→\ ,trail:·,nbsp:␣,extends:❯,precedes:❮
 set cursorline
 
 " Красная линия
-set cc=81 
+set cc=+1
 
 " Показывать частичные команды в строке состояния
 set showcmd
@@ -32,7 +32,7 @@ set showcmd
 set balloonevalterm
 
 
-" Отступы и форматирование  
+" Отступы и форматирование
 " Количество пробелов, соответствующих табуляции
 set tabstop=4
 
@@ -70,7 +70,7 @@ set linebreak
 set showbreak=↪\
 
 
-" Поиск  
+" Поиск
 " Игнорировать регистр символов
 set ignorecase
 
@@ -84,7 +84,7 @@ set hlsearch
 set incsearch
 
 
-" Работа с файлами  
+" Работа с файлами
 " Установить кодировку интерфейса
 set encoding=utf-8
 
@@ -112,7 +112,7 @@ set updatetime=300
 autocmd FocusGained,BufEnter * checktime
 
 
-" Командная строка  
+" Командная строка
 " Меню автодополнения команд
 set wildmenu
 
@@ -123,7 +123,7 @@ set wildmode=longest,full
 set wildignore=*.pyc,*.o,*.obj,*~
 
 
-" Работа с окнами  
+" Работа с окнами
 " Открывать новые окна снизу
 set splitbelow
 
@@ -131,7 +131,7 @@ set splitbelow
 set splitright
 
 
-" Производительность  
+" Производительность
 " Быстрое соединение с терминалом
 set ttyfast
 
@@ -139,7 +139,7 @@ set ttyfast
 set lazyredraw
 
 
-" Мышь и клавиатура  
+" Мышь и клавиатура
 " Поддержка мыши во всех режимах
 set mouse=a
 
@@ -151,7 +151,7 @@ set clipboard=unnamedplus
 
 " Убрать артефакты в терминале kitty
 " https://github.com/kovidgoyal/kitty/issues/63
-set t_RV=  
+set t_RV=
 
 " Изменение курсора в зависимости от режима
 let &t_SI = "\e[6 q"  " INSERT mode
@@ -180,13 +180,13 @@ set iminsert=0
 set imsearch=0
 
 
-" Орфография  
+" Орфография
 " Включить проверку орфографии для английского и русского
 set spelllang=en,ru
 "set spell  " Включать вручную при необходимости
 
 
-" Автокоманды  
+" Автокоманды
 " При сохранении конфига kitty — перезапуск
 autocmd BufWritePost ~/.config/kitty/kitty.conf silent !pkill -SIGUSR1 kitty
 

@@ -51,8 +51,10 @@ nnoremap <S-Tab> :bp<cr>
 nnoremap <leader>s :split<cr>
 nnoremap <leader>v :vsplit<cr>
 
-" Удаление буфера
-nnoremap <leader>d :bd!<cr>
+" Закрыть буфер
+" NERDTree открывает файл в сплите (окне), просто :bd закрывает окно со всеми буферами в нем
+"nnoremap <C-c> :bp \| bd #<cr>
+nnoremap <leader>d :bp\|bd #<cr>
 
 " Убрать подсветку результатов поиска
 " nnoremap <Esc> в Kitty не работает
