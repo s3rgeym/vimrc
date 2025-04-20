@@ -29,7 +29,9 @@ set cc=+1
 set showcmd
 
 " Всплывающие подсказки в терминале
-set balloonevalterm
+if has('balloon_eval_term')
+  set balloonevalterm
+endif
 
 
 " Отступы и форматирование
@@ -88,11 +90,6 @@ set incsearch
 " Установить кодировку интерфейса
 set encoding=utf-8
 
-" Установить кодировку сохраняемых файлов (если можно)
-if !&readonly && &modifiable
-  set fileencoding=utf-8
-endif
-
 " Список кодировок для автоопределения
 set fileencodings=utf-8,cp1251,koi8-r,cp866
 
@@ -100,12 +97,9 @@ set fileencodings=utf-8,cp1251,koi8-r,cp866
 set autoread
 
 " Отключить бэкапы, временные и swap-файлы
-set nobackup
-set nowritebackup
-set noswapfile
-set noundofile
+set nobackup nowritebackup noswapfile noundofile
 
-" Задержка перед записью swap и CursorHold
+" Задержка перед записью swap и перед отображением всплывающих (CursorHold)
 set updatetime=300
 
 " Обновлять буфер при фокусе
