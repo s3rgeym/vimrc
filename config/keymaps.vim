@@ -66,12 +66,19 @@ nnoremap <silent> \\ :nohl<cr>
 " Edit Vimrc
 nnoremap <leader>ev :tabedit $MYVIMRC<cr>
 
-" Realod Vimrc
-nnoremap <leader>rv :so $MYVIMRC<cr>
+" Source Vimrc
+nnoremap <leader>. :so $MYVIMRC<cr>
+
+" Поиск и замена
+" Замена слова под курсором
+nnoremap <Leader>r :%s/\<<C-r><C-w>\>//gc<Left><Left><Left>
+
+" Замена выделенного текста
+vnoremap <Leader>r "hy:%s/<C-r>h//gc<Left><Left><Left>
 
 " Интегрированный терминал
-nnoremap <C-t> :<C-u>term<cr>
-tnoremap <C-t> <C-\><C-n>
+nnoremap <C-`> :<C-u>term<cr>
+tnoremap <C-`> <C-\><C-n>:bd!<cr>
 
 " NERDTree
 nnoremap <silent> <leader>p :NERDTreeToggle<cr>
