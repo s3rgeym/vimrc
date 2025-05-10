@@ -64,7 +64,7 @@ nnoremap <silent> <leader><leader> :nohl<cr>
 nnoremap <silent> \\ :nohl<cr>
 
 " Edit Vimrc
-nnoremap <leader>ev :tabedit $MYVIMRC<cr>
+nnoremap <leader>ev :edit $MYVIMRC<cr>
 
 " Source Vimrc
 nnoremap <leader>. :so $MYVIMRC<cr>

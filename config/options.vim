@@ -110,8 +110,8 @@ autocmd FocusGained,BufEnter * checktime
 " Меню автодополнения команд
 set wildmenu
 
-" Поведение автодополнения: сначала длиннейшее совпадение, потом все
-set wildmode=longest,full
+" Поведение автодополнения
+set wildmode=longest:full,full
 
 " Исключить некоторые файлы из wildmenu
 set wildignore=*.pyc,*.o,*.obj,*~

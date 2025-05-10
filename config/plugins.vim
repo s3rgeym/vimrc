@@ -67,6 +67,8 @@ Plug 'ryanoasis/vim-devicons'
 
 " Темы
 Plug 'morhetz/gruvbox'
+Plug 'dracula/vim'
+Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 
 call plug#end()
 

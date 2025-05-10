@@ -10,8 +10,9 @@ syntax enable
 set background=dark
 
 " Применяем цветовую схему, подавляя ошибки, если она недоступна
-silent! colorscheme gruvbox
+"silent! colorscheme gruvbox
+silent! colorscheme catppuccin_mocha
 
 " Настройка темы для airline
-let g:airline_theme = 'gruvbox'
+"let g:airline_theme = 'gruvbox'
 
