@@ -1,3 +1,7 @@
+" Нужно периодически запускать :PlugUpgrade для обновления vim-plug и
+" :PlugUpdate для обновления плагинов. Удалить неиспользуемые можно, вызвав
+" :PlugClean.
+
 " Установка vim-plug если отсутствует
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -12,7 +16,7 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 " Инициализация плагинов
 call plug#begin('~/.vim/plugged')
 
-" Базовые плагины
+" Базовые настройки
 Plug 'tpope/vim-sensible'
 
 " Файловый менеджер
@@ -66,9 +70,12 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
 
 " Темы
-Plug 'morhetz/gruvbox'
-Plug 'dracula/vim'
+" https://vimcolorschemes.com/i/top/b.dark
 Plug 'catppuccin/vim', { 'as': 'catppuccin' }
+Plug 'dracula/vim'
+Plug 'joshdick/onedark.vim'
+Plug 'morhetz/gruvbox'
+Plug 'sainnhe/sonokai'
 
 call plug#end()
 
