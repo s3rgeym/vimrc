@@ -102,6 +102,9 @@ set nobackup nowritebackup noswapfile
 " Делаем возможным постоянный undo
 set undofile
 
+" Максимальное количество шагов для отката
+set undolevels=1000
+
 " Путь до каталога с undo-файлами
 let &undodir = expand('$VIMHOME/undo')
 
@@ -112,6 +115,7 @@ endif
 
 " Настроим viminfo
 set viminfofile=$VIMHOME/viminfo
+set viminfo='1000,<1000,s100,h
 
 " Восстанавливаем последнюю позицию курсора при открытии файла
 augroup restore_cursor_position

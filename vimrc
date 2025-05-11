@@ -11,4 +11,3 @@ execute 'source' expand('$VIMHOME/config/plugins.vim')
 execute 'source' expand('$VIMHOME/config/options.vim')
 execute 'source' expand('$VIMHOME/config/keymaps.vim')
 execute 'source' expand('$VIMHOME/config/theme.vim')
-

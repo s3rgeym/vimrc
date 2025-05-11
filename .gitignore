@@ -1,6 +1,6 @@
+*.html
 /autoload
 /plugged
 /spell
-*.html
 /undo
 /viminfo
