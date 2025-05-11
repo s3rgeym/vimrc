@@ -1,17 +1,14 @@
 " отключаем режим совместимости с vi
 set nocompatible
 
-" Эта переменная окружения используется в текущих настройках, но может быть не
-" задана
-if !exists('$MYVIMRC')
-  " Эта переменная будет доступна в подключаемых через source скриптах
-  let $MYVIMRC = expand('<sfile>:p')
-endif
+" Путь до конфига
+if empty($MYVIMRC) | let $MYVIMRC = expand('<sfile>:p') | endif
 
-" gf откроет файл в редакторе
-source ~/.vim/config/plugins.vim
+let $VIMHOME = expand('<sfile>:p:h')
 
-" Основные настройки должны идти после плагинов, тк многое может быть переопределено в плагинах
-source ~/.vim/config/options.vim
-source ~/.vim/config/keymaps.vim
-source ~/.vim/config/theme.vim
+execute 'source' expand('$VIMHOME/config/plugins.vim')
+" Основные настройки могут быть переопределены в плагинах
+execute 'source' expand('$VIMHOME/config/options.vim')
+execute 'source' expand('$VIMHOME/config/keymaps.vim')
+execute 'source' expand('$VIMHOME/config/theme.vim')
+

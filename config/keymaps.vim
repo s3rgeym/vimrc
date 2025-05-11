@@ -43,9 +43,12 @@ nnoremap <A-Right> <C-w><
 nnoremap <A-Left> <C-w>>
 
 " Переключение между буферами
-" Можно использовать Ctrl+Up/Down, на которые навешена прокрутка
-nnoremap <Tab> :bn<cr>
-nnoremap <S-Tab> :bp<cr>
+nnoremap <C-Up> :bn<cr>
+nnoremap <C-Down> :bp<cr>
+
+" Переключение между табами
+noremap <Tab> :tabnext<cr>
+nnoremap <S-Tab> :tabprevious<cr>
 
 " Разделение окон
 nnoremap <leader>s :split<cr>

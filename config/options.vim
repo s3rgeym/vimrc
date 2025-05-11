@@ -96,8 +96,31 @@ set fileencodings=utf-8,cp1251,koi8-r,cp866
 " Перезагружать файл, если он изменился извне
 set autoread
 
-" Отключить бэкапы, временные и swap-файлы
-set nobackup nowritebackup noswapfile noundofile
+" Отключаем бекапы (file.txt~) и своп-файлы (*.swp)
+set nobackup nowritebackup noswapfile
+
+" Делаем возможным постоянный undo
+set undofile
+
+" Путь до каталога с undo-файлами
+let &undodir = expand('$VIMHOME/undo')
+
+" Убедимся, что директория для undo существует
+if !isdirectory($VIMHOME . '/undo')
+  call mkdir($VIMHOME . '/undo', 'p')
+endif
+
+" Настроим viminfo
+set viminfofile=$VIMHOME/viminfo
+
+" Восстанавливаем последнюю позицию курсора при открытии файла
+augroup restore_cursor_position
+  autocmd!
+  autocmd BufReadPost *
+        \ if line("'\"") > 0 && line("'\"") <= line("$") |
+        \   execute "normal! g`\"" |
+        \ endif
+augroup END
 
 " Задержка перед записью swap и перед отображением всплывающих (CursorHold)
 set updatetime=300
@@ -107,10 +130,10 @@ autocmd FocusGained,BufEnter * checktime
 
 
 " Командная строка
-" Меню автодополнения команд
+" Использовать меню автодополнения в командной строке
 set wildmenu
 
-" Поведение автодополнения
+" Автодополнение до общего префикса, а затем показываем меню и в цикле перебираем варианты
 set wildmode=longest:full,full
 
 " Исключить некоторые файлы из wildmenu
@@ -182,7 +205,7 @@ set spelllang=en,ru
 
 " Автокоманды
 " При сохранении конфига kitty — перезапуск
-autocmd BufWritePost ~/.config/kitty/kitty.conf silent !pkill -SIGUSR1 kitty
+"autocmd BufWritePost ~/.config/kitty/kitty.conf silent !pkill -SIGUSR1 kitty
 
 " При сохранении vimrc можно использовать:
 " au! BufWritePost $MYVIMRC source $MYVIMRC
