@@ -193,8 +193,10 @@ let &t_Cs="\<Esc>[4:3m"
 " Задержка для сочетаний
 set timeoutlen=500
 
-" Выделение текста с помощью Shift + стрелки
-set keymodel=startsel,stopsel
+" Выделение стредками с зажатым Shift
+" stopsel конфликтует с Ctrl-V
+"set keymodel=startsel,stopsel
+set keymodel=startsel
 
 " Разрешить переход курсора между строками с помощью h, l, <, >, [, ]
 set whichwrap+=h,l,<,>,[,]
