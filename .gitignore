@@ -1,5 +1,6 @@
 *.html
 /autoload
+/node_modules
 /plugged
 /spell
 /undo

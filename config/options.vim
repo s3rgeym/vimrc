@@ -134,17 +134,22 @@ autocmd FocusGained,BufEnter * checktime
 
 
 " Командная строка
-" Использовать меню автодополнения в командной строке
+" Использовать меню автодополнения в командной строке (`:e <Tab>`)
 set wildmenu
 
 " Автодополнение до общего префикса, а затем показываем меню и в цикле перебираем варианты
 set wildmode=longest:full,full
 
 " Исключить некоторые файлы из wildmenu
-set wildignore=*.py[co],*.obj,*.o,*~
-set wildignore+=*/node_modules/*,*/__pycache__/*,*/dist/*,*/build/*
-set wildignore+=*.jpg,*.jpeg,*.gif,*.png
-set wildignore+=*.zip,*.tar.gz,*.7z,*.rar
+let g:my_wildignore = join([
+      \   '*.py[co]', '*.obj', '*.o', '*~',
+      \   '.git/**', 'node_modules/**', '__pycache__/**', 'dist/**', 'build/**',
+      \   '*.docx', '*.xlsx', '*.pdf', '*.jpg', '*.jpeg', '*.gif', '*.png',
+      \   '*.webp', '*.mp3', '*.mp4',
+      \   '*.zip', '*.gzip', '*.gz', '*.bz2', '*.xz', '*.zst', '*.7z', '*.rar'
+      \ ], ',')
+
+exec 'set wildignore=' . g:my_wildignore
 
 " Работа с окнами
 " Открывать новые окна снизу
