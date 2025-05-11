@@ -141,8 +141,10 @@ set wildmenu
 set wildmode=longest:full,full
 
 " Исключить некоторые файлы из wildmenu
-set wildignore=*.pyc,*.o,*.obj,*~
-
+set wildignore=*.py[co],*.obj,*.o,*~
+set wildignore+=*/node_modules/*,*/__pycache__/*,*/dist/*,*/build/*
+set wildignore+=*.jpg,*.jpeg,*.gif,*.png
+set wildignore+=*.zip,*.tar.gz,*.7z,*.rar
 
 " Работа с окнами
 " Открывать новые окна снизу
