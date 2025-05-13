@@ -11,7 +11,10 @@ set background=dark
 
 " Применяем цветовую схему, подавляя ошибки, если она недоступна
 "silent! colorscheme catppuccin_mocha
-silent! colorscheme onedark
+silent! colorscheme catppuccin_macchiato
+
+" Включаем прозрачность
+hi Normal guibg=NONE ctermbg=NONE
 
 " Настройка темы для airline (если автоматически не определяет)
 "let g:airline_theme = 'gruvbox'

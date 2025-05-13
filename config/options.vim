@@ -11,6 +11,9 @@ set noerrorbells
 " Отключить визуальные сигналы ошибок
 set novisualbell
 
+" Отключить modeline в целях безопасности
+set nomodeline
+
 
 " Интерфейс
 " Показывать номера строк
@@ -19,7 +22,7 @@ set number
 " Отображать специальные символы (пробелы, табы и т.п.)
 set list listchars=tab:→\ ,trail:·,nbsp:␣,extends:❯,precedes:❮
 
-" Подсвечивать текущую строку
+" Подсвечивать текущую строкуset nomodeline
 set cursorline
 
 " Красная линия
