@@ -50,8 +50,7 @@ sudo pacman -S fzf ripgrep
 | `Q`       | normal  | Отключён (Ex mode)                   |
 | `>` / `<` | normal  | Увеличить/уменьшить отступ           |
 | `<` / `>` | visual  | То же, с повторным выделением        |
-| `Ctrl+A`  | normal  | Выделить весь файл                   |
-| `Ctrl+A`  | insert  | Выход в normal + выделение всего     |
+| `Ctrl+A`  | normal, visual  | Выделить весь текст                  |
 | `Space V` | normal  | Выделить последний вставленный текст |
 | `Ctrl+S`  | normal  | Сохранить файл                       |
 | `Ctrl+S`  | insert  | Сохранить файл                       |
@@ -92,8 +91,7 @@ sudo pacman -S fzf ripgrep
 | Сочетание   | Режим    | Действие                         |
 | ----------- | -------- | -------------------------------- |
 | `Space ss`  | normal   | Вкл/выкл проверку орфографии     |
-| `Ctrl+амперсанд` | normal   | Открыть терминал                 |
-| `Ctrl+амперсанд` | terminal | Закрыть терминал                 |
+| `Ctrl+амперсанд` | normal, terminal   | Показать/скрыть терминал                 |
 | `Ctrl+N`    | normal   | Вкл/выкл `NERDTree`              |
 | `Space f`   | normal   | Поиск файлов через `fzf`         |
 | `Space /`   | normal   | Глобальный поиск через `ripgrep` |
