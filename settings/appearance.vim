@@ -10,11 +10,14 @@ syntax enable
 set background=dark
 
 " Применяем цветовую схему, подавляя ошибки, если она недоступна
-"silent! colorscheme catppuccin_mocha
 silent! colorscheme catppuccin_macchiato
 
-" Включаем прозрачность
-hi Normal guibg=NONE ctermbg=NONE
+if has('gui_running')
+  set guifont=JetBrainsMono\ Nerd\ Font:h11
+else
+  " В том же gVim прозрачность не работает
+  hi Normal ctermbg=NONE guibg=NONE
+endif
 
 " Настройка темы для airline (если автоматически не определяет)
 "let g:airline_theme = 'gruvbox'

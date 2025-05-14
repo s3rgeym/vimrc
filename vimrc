@@ -10,8 +10,8 @@ set nocompatible
 
 " В Vim 9 можно через рантайм подлючать скрипты в текущей директории
 " gf чтобы открыть файл (gx — ссылку)
-runtime config/plugins.vim
+runtime settings/plugins.vim
 " Основные настройки могут быть переопределены в плагинах
-runtime config/options.vim
-runtime config/keymaps.vim
-runtime config/theme.vim
+runtime settings/common.vim
+runtime settings/keymaps.vim
+runtime settings/appearance.vim
