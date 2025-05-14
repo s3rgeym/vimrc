@@ -1,3 +1,4 @@
+" Unused
 " Отладка Python с pdb
 " nnoremap <buffer> <F5> :w<CR>:term python -m pdb -c continue %<CR>
 " nnoremap <buffer> <F9> :call ToggleBreakpoint()<CR>
