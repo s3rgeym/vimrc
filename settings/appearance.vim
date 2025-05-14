@@ -13,7 +13,7 @@ set background=dark
 silent! colorscheme catppuccin_macchiato
 
 if has('gui_running')
-  set guifont=JetBrainsMono\ Nerd\ Font:h11
+  set guifont=JetBrainsMono\ Nerd\ Font\ 11
 else
   " В том же gVim прозрачность не работает
   hi Normal ctermbg=NONE guibg=NONE
