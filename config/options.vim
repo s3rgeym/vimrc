@@ -135,6 +135,12 @@ set updatetime=300
 " Обновлять буфер при фокусе
 autocmd FocusGained,BufEnter * checktime
 
+" При сохранении конфига kitty — перезапуск
+"autocmd BufWritePost ~/.config/kitty/kitty.conf silent !pkill -SIGUSR1 kitty
+
+" При сохранении vimrc можно использовать:
+" au! BufWritePost $MYVIMRC source $MYVIMRC
+
 
 " Командная строка
 " Использовать меню автодополнения в командной строке (`:e <Tab>`)
@@ -217,11 +223,3 @@ set imsearch=0
 " Включить проверку орфографии для английского и русского
 set spelllang=en,ru
 "set spell  " Включать вручную при необходимости
-
-
-" Автокоманды
-" При сохранении конфига kitty — перезапуск
-"autocmd BufWritePost ~/.config/kitty/kitty.conf silent !pkill -SIGUSR1 kitty
-
-" При сохранении vimrc можно использовать:
-" au! BufWritePost $MYVIMRC source $MYVIMRC

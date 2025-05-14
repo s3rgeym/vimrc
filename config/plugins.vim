@@ -56,6 +56,9 @@ Plug 'prabirshrestha/asyncomplete-buffer.vim'
 Plug 'prabirshrestha/asyncomplete-file.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 
+" Отладчик
+Plug 'puremourning/vimspector'
+
 " Подсветка имен и кодов цветов
 Plug 'ap/vim-css-color'
 
@@ -136,6 +139,9 @@ au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#source
     \ 'priority': 10,
     \ 'completor': function('asyncomplete#sources#file#completor')
     \ }))
+
+" vimspector
+let g:vimspector_enable_mappings = 'HUMAN'
 
 " airline
 set noshowmode
