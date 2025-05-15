@@ -147,7 +147,7 @@ autocmd FocusGained,BufEnter * checktime
 set wildmenu
 
 " Автодополнение до общего префикса, а затем показываем меню и в цикле перебираем варианты
-set wildmode=longest,full
+set wildmode=longest:full,full
 
 " Исключить некоторые файлы из wildmenu
 let g:my_wildignore = join([
@@ -213,6 +213,9 @@ set keymodel=startsel
 
 " Разрешить переход курсора между строками с помощью h, l, <, >, [, ]
 set whichwrap+=h,l,<,>,[,]
+
+" Не переходить в начало строки при навигации
+set nostartofline
 
 " Встроенная русская раскладка Vim решает проблему с нерабочими горячими клавишами при смене системной
 " Для переключения используем Ctrl-^ (Ctrl+6)
