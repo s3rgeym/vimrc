@@ -147,7 +147,7 @@ autocmd FocusGained,BufEnter * checktime
 set wildmenu
 
 " Автодополнение до общего префикса, а затем показываем меню и в цикле перебираем варианты
-set wildmode=longest:full,full
+set wildmode=longest,full
 
 " Исключить некоторые файлы из wildmenu
 let g:my_wildignore = join([
@@ -181,7 +181,11 @@ set lazyredraw
 set mouse=a
 
 " Правильная обработка мыши в терминале
-set ttymouse=sgr
+if &term =~ 'xterm\|kitty\|alacritty'
+  set ttymouse=sgr
+else
+  set ttymouse=xterm2
+endif
 
 " Использовать системный буфер обмена
 set clipboard=unnamedplus
