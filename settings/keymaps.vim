@@ -33,6 +33,12 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+" Перемещение окон
+nnoremap <A-h> <C-w>H
+nnoremap <A-j> <C-w>J
+nnoremap <A-k> <C-w>K
+nnoremap <A-l> <C-w>L
+
 " Изменение размеров окон
 nnoremap <A-Up> <C-w>-
 nnoremap <A-Down> <C-w>+
