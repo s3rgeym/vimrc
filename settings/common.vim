@@ -56,6 +56,9 @@ set autoindent
 " Автоматический отступ на основе кода
 set smartindent
 
+" Добавлять отступы к перенесенным строкам
+set breakindent
+
 " Стиль отступа для C-подобных языков
 set cindent
 
